@@ -35,11 +35,11 @@ export default function Contact() {
             <div className="space-y-4">
               <div className="flex items-center gap-4">
                 <MapPin className="text-[#FF8C00]" />
-                <p>RCCG Desire of Nations, 14 IT Igbani Street, Jabi, Abuja</p>
+                <p>Abuja</p>
               </div>
               <div className="flex items-center gap-4">
                 <Mail className="text-[#FF8C00]" />
-                <p>info@pastormikeayanbode.com</p>
+                <p>mikeayanbode@gmail.com</p>
               </div>
               <div className="flex items-center gap-4">
                 <Phone className="text-[#FF8C00]" />
