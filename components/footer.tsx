@@ -72,7 +72,7 @@ export default function Footer() {
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 mt-8 pt-4 border-t border-gray-800 text-center text-xs text-gray-400">
-        Copyright © 2023 Pastor Mike ayanbode | All Rights Reserved
+        Copyright © 2025 Pastor Mike ayanbode | All Rights Reserved
       </div>
     </footer>
   )
