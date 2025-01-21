@@ -38,13 +38,12 @@ export default function Footer() {
             <div className="flex gap-3">
               <MapPin className="text-[#FF8C00] flex-shrink-0 w-4 h-4" />
               <div>
-                <p>RCCG Desire of Nations, 14 IT</p>
-                <p>Igbani Street, Jabi, Abuja</p>
+                <p>Abuja</p>
               </div>
             </div>
             <div className="flex gap-3">
               <Mail className="text-[#FF8C00] w-4 h-4" />
-              <p>info@pastormikeayanbode.com</p>
+              <p>mikeayanbode@gmail.com</p>
             </div>
             <div className="flex gap-3">
               <Phone className="text-[#FF8C00] w-4 h-4" />

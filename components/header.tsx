@@ -13,7 +13,7 @@ export default function Header() {
         {/* Top Section */}
         <div className="flex justify-between items-center py-4">
           <Link href="/" className="flex items-center gap-2">
-            <span className="text-[#FF8C00] font-bold text-xl">PASTOR</span>
+            <span className="text-[#FF8C00] font-bold text-xl">PASTOR</span> <br />
             <span className="text-white text-xl">MIKE AYANBODE</span>
           </Link>
 
