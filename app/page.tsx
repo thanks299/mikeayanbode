@@ -190,9 +190,8 @@ export default function Home() {
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {[
-              { title: "Sunday Service", date: "Every Sunday, 10:00 AM" },
+              { title: "Sunday Service", date: "Every Sunday, 9:00 AM" },
               { title: "Bible Study", date: "Every Wednesday, 7:00 PM" },
-              { title: "Youth Conference", date: "July 15-17, 2023" },
             ].map((event, index) => (
               <motion.div
                 key={index}
