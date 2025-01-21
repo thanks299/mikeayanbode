@@ -40,8 +40,7 @@ export default function About() {
               touched countless lives through his ministry.
             </p>
             <p className="mb-6">
-              As the lead pastor of RCCG Desire of Nations, Pastor Mike has created a welcoming community where
-              individuals can grow in their faith, discover their purpose, and make a positive impact on the world
+              Pastor Mike has created a welcoming community where individuals can grow in their faith, discover their purpose, and make a positive impact on the world
               around them.
             </p>
             <p>
