@@ -1,8 +1,27 @@
+"use client"
+
+import { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Facebook, Twitter, Instagram, Youtube, MapPin, Mail, Phone } from "lucide-react"
+import { subscribeToNewsletter } from "@/app/subscribe-action"
 
 export default function Footer() {
+  const [isPending, setIsPending] = useState(false)
+  const [message, setMessage] = useState("")
+
+  async function handleSubmit(formData: FormData) {
+    setIsPending(true)
+    try {
+      const result = await subscribeToNewsletter(formData)
+      setMessage(result.message)
+    } catch (error) {
+      setMessage("Something went wrong. Please try again.")
+    } finally {
+      setIsPending(false)
+    }
+  }
+
   return (
     <footer className="bg-black text-white pt-8 md:pt-12 pb-4">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -56,19 +75,24 @@ export default function Footer() {
         <div>
           <h3 className="text-base md:text-lg lg:text-xl font-bold mb-3">Subscribe</h3>
           <p className="mb-3 text-xs md:text-sm">Subscribe to our newsletter. Be always in trend!</p>
-          <div className="space-y-3">
+          <form action={handleSubmit} className="space-y-3">
             <Input
               type="email"
+              name="email"
               placeholder="Enter Email"
-              className="bg-transparent border-[#FF8C00] text-white text-xs md:text-sm"
+              required
+              className="bg-transparent border-[#FF8C00] text-white text-xs md:text-sm h-12"
             />
             <Button
-              className="bg-black text-[#FF8C00] border border-[#FF8C00] hover:bg-[#FF8C00] hover:text-black transition-colors w-auto px-4 md:px-6 text-xs md:text-sm"
+              type="submit"
+              disabled={isPending}
+              className="border border-[#FF8C00] bg-black text-white hover:bg-[#FF8C00] hover:text-black transition-colors w-auto px-4 md:px-6 text-xs md:text-sm h-12"
               variant="outline"
             >
-              Subscribe
+              {isPending ? "Subscribing..." : "Subscribe"}
             </Button>
-          </div>
+            {message && <p className="text-sm text-[#FF8C00]">{message}</p>}
+          </form>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 mt-8 pt-4 border-t border-gray-800 text-center text-xs text-gray-400">

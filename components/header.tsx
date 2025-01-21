@@ -25,13 +25,13 @@ export default function Header() {
     <header className="bg-gradient-to-b from-[#1a1a2e] to-transparent sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
         {/* Top Section */}
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-3 lg:py-4">
           <Link href="/" className="flex items-center gap-2 whitespace-nowrap">
-            <span className="text-[#FF8C00] font-bold text-xl">PASTOR</span>
-            <span className="text-white text-xl">MIKE AYANBODE</span>
+            <span className="text-[#FF8C00] font-bold text-xl">Pastor</span>
+            <span className="text-white text-xl">Mike Ayanbode</span>
           </Link>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3 lg:gap-6">
             <Search className="text-[#FF8C00] cursor-pointer" />
             <MessageSquare className="text-[#FF8C00] cursor-pointer" />
             {/* Mobile Menu Button */}
@@ -87,8 +87,8 @@ export default function Header() {
         )}
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex justify-between items-center bg-white rounded-full px-8 py-2 mb-4">
-          <div className="flex gap-8">
+        <nav className="hidden lg:flex justify-between items-center bg-white rounded-full px-6 lg:px-8 py-2 mb-4">
+          <div className="flex gap-4 lg:gap-6">
             {navLinks.map((link) => (
               <Link key={link.href} href={link.href} className="hover:text-[#FF8C00]">
                 {link.label}
