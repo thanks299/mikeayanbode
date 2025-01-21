@@ -22,7 +22,7 @@ export default function About() {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <Image
-              src="/mikaaynbode.jpg"
+              src="/mikaaynbode.jpeg"
               alt="Pastor Mike Ayanbode"
               width={500}
               height={600}

@@ -17,7 +17,7 @@ export default function Contact() {
           transition={{ duration: 0.5 }}
           className="text-4xl font-bold mb-12 text-center"
         >
-          Schedule an Appointment with Pastor Mike Ayanbode
+          Schedule an Appointment with me
         </motion.h1>
         <div className="grid md:grid-cols-2 gap-12">
           <motion.div
