@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import ScrollArrow from '@/components/scroll-arrow'
 
 export default function Resources() {
   const resources = [
@@ -40,6 +41,7 @@ export default function Resources() {
           ))}
         </div>
       </div>
+      <ScrollArrow />
     </div>
   )
 }

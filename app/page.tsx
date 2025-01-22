@@ -8,7 +8,6 @@ import { useState } from "react"
 import TestimonyModal from "@/components/testimony-modal"
 import ScrollArrow from '@/components/scroll-arrow'
 
-
 export default function Home() {
   const [isTestimonyModalOpen, setIsTestimonyModalOpen] = useState(false)
 

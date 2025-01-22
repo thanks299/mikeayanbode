@@ -2,6 +2,7 @@
 
 import Image from "next/image"
 import { motion } from "framer-motion"
+import ScrollArrow from '@/components/scroll-arrow'
 
 export default function About() {
   return (
@@ -51,6 +52,7 @@ export default function About() {
           </motion.div>
         </div>
       </div>
+      <ScrollArrow />
     </div>
   )
 }
