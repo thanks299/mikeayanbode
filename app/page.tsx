@@ -6,6 +6,8 @@ import { Book, Church, Crown, Star, Calendar, ArrowRight } from "lucide-react"
 import { motion } from "framer-motion"
 import { useState } from "react"
 import TestimonyModal from "@/components/testimony-modal"
+import ScrollArrow from '@/components/scroll-arrow'
+
 
 export default function Home() {
   const [isTestimonyModalOpen, setIsTestimonyModalOpen] = useState(false)
@@ -204,6 +206,7 @@ export default function Home() {
       </section>
 
       <TestimonyModal isOpen={isTestimonyModalOpen} onClose={() => setIsTestimonyModalOpen(false)} />
+      <ScrollArrow />
     </div>
   )
 }
