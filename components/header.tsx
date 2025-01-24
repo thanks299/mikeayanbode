@@ -16,9 +16,9 @@ export default function Header() {
 
   const socialLinks = [
     { href: "#", icon: <Facebook size={20} /> },
-    { href: "#", icon: <Twitter size={20} /> },
+    { href: "https://x.com/rpmikeayanbode", icon: <Twitter size={20} /> },
     { href: "#", icon: <Instagram size={20} /> },
-    { href: "#", icon: <Youtube size={20} /> },
+    { href: "https://www.youtube.com/@RealPastorMikeAyanbode", icon: <Youtube size={20} /> },
   ];
 
   return (
@@ -76,6 +76,8 @@ export default function Header() {
                   <Link
                     key={index}
                     href={social.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="hover:text-[#FF8C00] text-gray-800"
                   >
                     {social.icon}

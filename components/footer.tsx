@@ -22,6 +22,13 @@ export default function Footer() {
     }
   }
 
+  const socialMediaLinks = [
+    'https://www.facebook.com/yourfacebookpage',
+    'https://x.com/rpmikeayanbode?t=azGtd-KqAw5_7Oj_GRZcAw&s=09',
+    'https://www.instagram.com/yourinstagramhandle',
+    'https://www.youtube.com/@RealPastorMikeAyanbode',
+  ];
+
   return (
     <footer className="bg-black text-white pt-8 md:pt-12 pb-4">
       <div className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
@@ -39,11 +46,13 @@ export default function Footer() {
           <div className="flex gap-3">
             {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
               <a
-                key={i}
-                href="#"
-                className="w-6 h-6 md:w-8 md:h-8 rounded-full border border-[#FF8C00] flex items-center justify-center hover:bg-[#FF8C00] transition-colors"
+              key={i}
+              href={socialMediaLinks[i]}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-6 h-6 md:w-8 md:h-8 rounded-full border border-[#FF8C00] flex items-center justify-center hover:bg-[#FF8C00] transition-colors"
               >
-                <Icon className="w-3 h-3 md:w-4 md:h-4" />
+                <Icon />
               </a>
             ))}
           </div>
