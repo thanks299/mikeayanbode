@@ -24,8 +24,8 @@ export default function Footer() {
 
   const socialMediaLinks = [
     'https://www.facebook.com/yourfacebookpage',
-    'https://x.com/rpmikeayanbode?t=azGtd-KqAw5_7Oj_GRZcAw&s=09',
-    'https://www.instagram.com/yourinstagramhandle',
+    'https://x.com/rpmikeayanbode',
+    'https://www.instagram.com/pmikeayanbode',
     'https://www.youtube.com/@RealPastorMikeAyanbode',
   ];
 
