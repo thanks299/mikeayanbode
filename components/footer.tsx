@@ -50,7 +50,7 @@ export default function Footer() {
               href={socialMediaLinks[i]}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-6 h-6 md:w-8 md:h-8 rounded-full border border-[#FF8C00] flex items-center justify-center hover:bg-[#FF8C00] transition-colors"
+              className="w-6 h-6 text-[#FF8C00] md:w-8 md:h-8 rounded-full border border-[#FF8C00] flex items-center justify-center hover:bg-white transition-colors"
               >
                 <Icon />
               </a>
@@ -84,7 +84,7 @@ export default function Footer() {
         <div>
           <h3 className="text-base md:text-lg lg:text-xl font-bold mb-3">Subscribe</h3>
           <p className="mb-3 text-xs md:text-sm">Subscribe to our newsletter. Be always in trend!</p>
-          <form action={handleSubmit} className="space-y-3">
+          <form action={handleSubmit} className="space-y-3 border:white">
             <Input
               type="email"
               name="email"
@@ -95,7 +95,7 @@ export default function Footer() {
             <Button
               type="submit"
               disabled={isPending}
-              className="border border-[#FF8C00] bg-black text-white hover:bg-[#FF8C00] hover:text-black transition-colors w-auto px-4 md:px-6 text-xs md:text-sm h-12"
+              className="border-[#FF8C00] bg-black text-white hover:bg-[#FF8C00] hover:text-black hover:border-black transition-colors w-auto px-4 md:px-6 text-xs md:text-sm h-12"
               variant="outline"
             >
               {isPending ? "Subscribing..." : "Subscribe"}
