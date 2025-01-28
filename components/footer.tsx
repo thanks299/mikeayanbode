@@ -50,7 +50,7 @@ export default function Footer() {
               href={socialMediaLinks[i]}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-6 h-6 text-[#FF8C00] md:w-8 md:h-8 rounded-full border border-[#FF8C00] flex items-center justify-center hover:bg-white transition-colors"
+              className="w-6 h-6 text-[#FF8C00] md:w-8 md:h-8 rounded-full border border-[#FF8C00] flex items-center justify-center hover:text-[white] transition-colors"
               >
                 <Icon />
               </a>

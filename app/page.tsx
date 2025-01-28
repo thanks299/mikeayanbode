@@ -138,7 +138,7 @@ export default function Home() {
                 src="/mikaaynbode.jpeg"
                 alt="Pastor Mike Ayanbode"
                 fill
-                className="object-cover"
+                className="rounded-lg"
               />
             </motion.div>
           </div>
