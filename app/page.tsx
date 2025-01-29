@@ -3,7 +3,7 @@
 import Image from "next/image"
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Book, Church, Crown, Star, Calendar, ArrowRight } from "lucide-react"
+import { Book, Church, Crown, Star, Calendar, ArrowRight, Link } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import TestimonyModal from "@/components/testimony-modal"
@@ -212,9 +212,9 @@ export default function Home() {
           </motion.h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              { title: "Sunday Service", date: "February 2, 2025" },
-              { title: "Midweek Prayer", date: "February 5, 2025" },
-              { title: "Youth Conference", date: "February 10, 2025" },
+              { title: "Sunday School", date: "Every Sunday Service" },
+              { title: "Midweek Prayer", date: "Twice a week" },
+              { title: "Women Conference", date: "14 and 15th of February 2025" },
             ].map((event, index) => (
               <motion.div
                 key={index}
