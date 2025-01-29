@@ -15,7 +15,7 @@ export default function Home() {
   return (
     <div className="min-h-screen text-white">
       {/* Hero Section */}
-      <section className="relative h-[90vh] md:h-[110vh]">
+      <section className="relative h-[60vh] md:h-[70vh]">
         <Image
           src="/mikeayanbode3.jpg"
           alt="Pastor Mike Ayanbode"
@@ -63,20 +63,20 @@ export default function Home() {
       </section>
 
       {/* Features Section */}
-      <section className="py-10 md:py-16 bg-gradient-to-b from-[#1a1a2e] to-black">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-8 md:py-12 bg-gradient-to-b from-[#1a1a2e] to-black">
+        <div className="max-w-6xl mx-auto px-4">
           <motion.div
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
             viewport={{ once: true }}
-            className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-9"
+            className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8"
           >
             <FeatureCard
               icon={
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-[#FF8C00] rounded-full flex items-center justify-center mx-auto">
-                  <Book className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                <div className="w-16 h-16 bg-[#FF8C00] rounded-full flex items-center justify-center mx-auto transition-transform transform hover:scale-110">
+                  <Book className="w-8 h-8 text-white" />
                 </div>
               }
               title="WORD"
@@ -84,8 +84,8 @@ export default function Home() {
             />
             <FeatureCard
               icon={
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-[#FF8C00] rounded-full flex items-center justify-center mx-auto">
-                  <Church className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                <div className="w-16 h-16 bg-[#FF8C00] rounded-full flex items-center justify-center mx-auto transition-transform transform hover:scale-110">
+                  <Church className="w-8 h-8 text-white" />
                 </div>
               }
               title="WORSHIP"
@@ -93,8 +93,8 @@ export default function Home() {
             />
             <FeatureCard
               icon={
-                <div className="w-16 h-16 md:w-20 md:h-20 bg-[#FF8C00] rounded-full flex items-center justify-center mx-auto">
-                  <Crown className="w-8 h-8 md:w-10 md:h-10 text-white" />
+                <div className="w-16 h-16 bg-[#FF8C00] rounded-full flex items-center justify-center mx-auto transition-transform transform hover:scale-110">
+                  <Crown className="w-8 h-8 text-white" />
                 </div>
               }
               title="KINGDOM"
@@ -105,9 +105,9 @@ export default function Home() {
       </section>
 
       {/* Welcome Section */}
-      <section className="py-12 md:py-16 bg-black">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-10 items-center">
+      <section className="py-8 md:py-12 bg-black">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
             <motion.div 
               initial={{ opacity: 0, x: -20 }} 
               animate={{ opacity: 1, x: 0 }} 
@@ -132,7 +132,7 @@ export default function Home() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.5 }}
-              className="relative h-[750px] md:h-[450px] lg:h-[450px]"
+              className="relative h-[350px] md:h-[400px] lg:h-[400px]"
             >
               <Image
                 src="/mikaaynbode.jpeg"
@@ -146,8 +146,8 @@ export default function Home() {
       </section>
 
       {/* Praise Report Section */}
-      <section className="py-12 md:py-16 bg-[#1a1a2e]">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-8 md:py-12 bg-[#1a1a2e]">
+        <div className="max-w-6xl mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -156,9 +156,8 @@ export default function Home() {
           >
             Praise Reports
           </motion.h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              { 
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            {[{ 
                 title: "Healing Testimony", 
                 content: "I was healed from a chronic illness after Pastor Mike prayed for me." 
               },
@@ -201,8 +200,8 @@ export default function Home() {
       </section>
 
       {/* Upcoming Events Section */}
-      <section className="py-12 md:py-16 bg-gradient-to-b from-black to-[#1a1a2e]">
-        <div className="max-w-7xl mx-auto px-4">
+      <section className="py-8 md:py-12 bg-gradient-to-b from-black to-[#1a1a2e]">
+        <div className="max-w-6xl mx-auto px-4">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -211,62 +210,59 @@ export default function Home() {
           >
             Upcoming Events
           </motion.h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {[
-              { 
-                title: "Sunday Service", 
-                date: "Every Sunday, 9:00 AM" 
-              },
-              { 
-                title: "Bible Study", 
-                date: "Every Wednesday, 7:00 PM" 
-              }
+              { title: "Sunday Service", date: "February 2, 2025" },
+              { title: "Midweek Prayer", date: "February 5, 2025" },
+              { title: "Youth Conference", date: "February 10, 2025" },
             ].map((event, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="bg-zinc-900 p-6 rounded-lg flex items-center"
+                className="bg-zinc-900 p-6 rounded-lg"
               >
-                <Calendar className="w-10 h-10 md:w-12 md:h-12 text-[#FF8C00] mr-6 flex-shrink-0" />
-                <div>
-                  <h3 className="font-bold mb-3 text-sm md:text-base">{event.title}</h3>
-                  <p className="text-xs md:text-sm text-gray-400">{event.date}</p>
-                </div>
+                <Calendar className="w-8 h-8 text-[#FF8C00] mb-3 mx-auto" />
+                <h3 className="text-base md:text-lg font-bold mb-3 text-center">{event.title}</h3>
+                <p className="text-xs md:text-sm text-gray-400 text-center">{event.date}</p>
               </motion.div>
             ))}
           </div>
-          <div className="text-center mt-8">
-            <Button variant="link" className="text-[#FF8C00] text-sm md:text-base">
-              View All Events <ArrowRight className="ml-2 w-5 h-5" />
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="mt-8 text-center"
+          >
+            <Button
+              className="bg-[#FF8C00] hover:bg-[#FF8C00]/90 text-sm md:text-base"
+            >
+              View More Events
             </Button>
-          </div>
+          </motion.div>
         </div>
       </section>
 
-      <TestimonyModal 
-        isOpen={isTestimonyModalOpen} 
-        onClose={() => setIsTestimonyModalOpen(false)} 
+      <TestimonyModal
+        isOpen={isTestimonyModalOpen}
+        onClose={() => setIsTestimonyModalOpen(false)}
       />
       <ScrollArrow />
     </div>
   )
 }
 
-function FeatureCard({ icon, title, description }: { 
-  icon: React.ReactNode
-  title: string
-  description: string 
-}) {
-  return (
-    <motion.div 
-      whileHover={{ scale: 1.05 }} 
-      className="bg-zinc-900 p-6 rounded-lg text-center"
-    >
-      <div className="w-16 h-16 mx-auto mb-4">{icon}</div>
-      <h3 className="font-bold mb-4 text-sm md:text-base">{title}</h3>
-      <p className="text-xs md:text-sm text-gray-400">{description}</p>
-    </motion.div>
-  )
+interface FeatureCardProps {
+  icon: React.ReactNode;
+  title: string;
+  description: string;
 }
+
+const FeatureCard = ({ icon, title, description }: FeatureCardProps) => (
+  <div className="bg-zinc-900 p-6 rounded-lg hover:scale-105 transition-transform">
+    <div className="mb-4 text-center">{icon}</div>
+    <h3 className="text-lg font-bold mb-2 text-center">{title}</h3>
+    <p className="text-sm text-gray-400 text-center">{description}</p>
+  </div>
+)
