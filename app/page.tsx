@@ -1,9 +1,10 @@
 "use client"
 
 import Image from "next/image"
+import Link from "next/link"
 import { useState } from "react"
 import { motion } from "framer-motion"
-import { Book, Church, Crown, Star, Calendar, ArrowRight, Link } from "lucide-react"
+import { Book, Church, Crown, Star, Calendar } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
 import TestimonyModal from "@/components/testimony-modal"
@@ -123,9 +124,11 @@ export default function Home() {
               <p className="mb-8 text-sm md:text-base">
                 Be sure to get in touch with me on my social media platforms, I would love to connect with you.
               </p>
-              <Button variant="link" className="text-[#FF8C00] px-0 text-sm md:text-base">
-                Read more....
-              </Button>
+              <Link href="/about">
+                <Button variant="link" className="text-[#FF8C00] px-0 text-sm md:text-base">
+                  Read more....
+                </Button>
+              </Link>
             </motion.div>
 
             <motion.div
