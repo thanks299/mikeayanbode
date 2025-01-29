@@ -114,7 +114,7 @@ export default function Home() {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-6">
-                Hello there,
+                Hello there!
               </h2>
               <p className="mb-6 text-sm md:text-base">
                 I am Pastor Mike Ayanbode and you are welcome to my official website, I hope you get refreshed and

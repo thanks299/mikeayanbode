@@ -4,7 +4,7 @@ import { useState } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Facebook, Twitter, Instagram, Youtube, MapPin, Mail, Phone } from "lucide-react"
-import { subscribeToNewsletter } from "@/app/subscribe-action"
+import { subscribeToNewsletter } from "@/app/actions/subscribe"
 
 export default function Footer() {
   const [isPending, setIsPending] = useState(false)
@@ -23,11 +23,11 @@ export default function Footer() {
   }
 
   const socialMediaLinks = [
-    'https://www.facebook.com/yourfacebookpage',
-    'https://x.com/rpmikeayanbode',
-    'https://www.instagram.com/pmikeayanbode',
-    'https://www.youtube.com/@RealPastorMikeAyanbode',
-  ];
+    "https://www.facebook.com/yourfacebookpage",
+    "https://x.com/rpmikeayanbode",
+    "https://www.instagram.com/pmikeayanbode",
+    "https://www.youtube.com/@RealPastorMikeAyanbode",
+  ]
 
   return (
     <footer className="bg-black text-white pt-8 md:pt-12 pb-4">
@@ -46,11 +46,11 @@ export default function Footer() {
           <div className="flex gap-3">
             {[Facebook, Twitter, Instagram, Youtube].map((Icon, i) => (
               <a
-              key={i}
-              href={socialMediaLinks[i]}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-6 h-6 text-[#FF8C00] md:w-8 md:h-8 rounded-full border border-[#FF8C00] flex items-center justify-center hover:text-[white] transition-colors"
+                key={i}
+                href={socialMediaLinks[i]}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-6 h-6 text-[#FF8C00] md:w-8 md:h-8 rounded-full border border-[#FF8C00] flex items-center justify-center hover:text-[white] transition-colors"
               >
                 <Icon />
               </a>
@@ -84,23 +84,21 @@ export default function Footer() {
         <div>
           <h3 className="text-base md:text-lg lg:text-xl font-bold mb-3">Subscribe</h3>
           <p className="mb-3 text-xs md:text-sm">Subscribe to our newsletter. Be always in trend!</p>
-          <form action={handleSubmit} className="space-y-3 border:white">
+          <form onSubmit={(e) => { e.preventDefault(); handleSubmit(new FormData(e.currentTarget)); }} className="space-y-3">
             <Input
               type="email"
               name="email"
               placeholder="Enter Email"
               required
-              className="bg-transparent border-[#FF8C00] text-white text-xs md:text-sm h-12"
+              className="w-full bg-white border-2 border-[#FF8C00] text-black placeholder:text-gray-500 h-12 px-4 rounded-md"
             />
             <Button
               type="submit"
-              disabled={isPending}
-              className="border-[#FF8C00] bg-black text-white hover:bg-[#FF8C00] hover:text-black hover:border-black transition-colors w-auto px-4 md:px-6 text-xs md:text-sm h-12"
+              className="w-full md:w-auto bg-black text-white border-2 border-[#FF8C00] hover:bg-[#FF8C00] hover:text-black transition-colors duration-200 h-12 px-8 rounded-md text-base font-medium"
               variant="outline"
             >
-              {isPending ? "Subscribing..." : "Subscribe"}
+              Subscribe
             </Button>
-            {message && <p className="text-sm text-[#FF8C00]">{message}</p>}
           </form>
         </div>
       </div>
