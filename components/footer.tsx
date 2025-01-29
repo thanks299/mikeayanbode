@@ -84,21 +84,23 @@ export default function Footer() {
         <div>
           <h3 className="text-base md:text-lg lg:text-xl font-bold mb-3">Subscribe</h3>
           <p className="mb-3 text-xs md:text-sm">Subscribe to our newsletter. Be always in trend!</p>
-          <form onSubmit={(e) => { e.preventDefault(); handleSubmit(new FormData(e.currentTarget)); }} className="space-y-3">
+          <form action={handleSubmit} className="space-y-3 border:white">
             <Input
               type="email"
               name="email"
               placeholder="Enter Email"
               required
-              className="w-full bg-white border-2 border-[#FF8C00] text-black placeholder:text-gray-500 h-12 px-4 rounded-md"
+              className="bg-transparent border-[#FF8C00] text-white text-xs md:text-sm h-12"
             />
             <Button
               type="submit"
-              className="w-full md:w-auto bg-black text-white border-2 border-[#FF8C00] hover:bg-[#FF8C00] hover:text-black transition-colors duration-200 h-12 px-8 rounded-md text-base font-medium"
+              disabled={isPending}
+              className="border-[#FF8C00] bg-black text-white hover:bg-[#FF8C00] hover:text-black hover:border-black transition-colors w-auto px-4 md:px-6 text-xs md:text-sm h-12"
               variant="outline"
             >
-              Subscribe
+              {isPending ? "Subscribing..." : "Subscribe"}
             </Button>
+            {message && <p className="text-sm text-[#FF8C00]">{message}</p>}
           </form>
         </div>
       </div>
