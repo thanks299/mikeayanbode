@@ -2,10 +2,11 @@
 
 import Link from "next/link";
 import { Facebook, Twitter, Instagram, Youtube, Search, MessageSquare, Menu, ArrowLeft } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState, useRef } from "react";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuRef = useRef<HTMLDivElement>(null);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -21,6 +22,22 @@ export default function Header() {
     { href: "https://www.youtube.com/@RealPastorMikeAyanbode", icon: <Youtube size={20} /> },
   ];
 
+  // Close menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
+        setMenuOpen(false);
+      }
+    };
+
+    if (menuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [menuOpen]);
   return (
     <header className="bg-gradient-to-b from-[#1a1a2e] to-transparent sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4">
